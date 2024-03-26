@@ -1,0 +1,57 @@
+# Mod de implementare
+
+Programul are rolul unui editor de imagini pe baza unor comenzi introduse de la
+tastatura. Acesta va afisa un mesaj corespunzator care va transmite
+utilizatorului daca a fost introdusa o comanda valida si daca aceasta a avut
+succes.
+
+1. Incarcarea imaginilor
+
+Extragem imaginile pe baza a 2 matrici distincte, pentru fiecare tip de
+imagine: in tonuri de gri si color. Vom citi informatiile imaginii aflate
+pe primele randuri si le vom asigna unor variabile specifice. Pe baza acestora
+se va stabili tipul imaginii, dimensiunea acesteia si valoarea maxima a unui
+pixel.
+
+2. Prelucrare imaginilor
+
+Acestea vor fi prelucrate cu ajutorul unei matrici de tipul unsigned
+char (pentru imagini de tip P2 sau P5) si de tip color (pentru imagini de tip
+P3 sau P6), "color" fiind o structura cu cei 3 pixeli (R,G,B) de tip unsigned
+char. Daca imaginea incarcata era in tonuri de gri, iar cea noua este color sau
+viceversa, se va elibera spatiul alocat celei anterioare. pentru ca ne vom baza
+din acel moment doar pe imaginea noua
+
+3.Comenzi
+
+-LOAD = va prelua informatiile in variabilele specifice si va stoca pixelii
+imaginilor in matricea corespunzatoare, folosindu-se fscanf pentru fisiere
+ascii si fread pentru fisiere binare
+
+-SELECT = comanda este comuna atat pentru imagini color, cat si pentru cele gri
+Va verifica validitatea parametrilor prin functia strtok si va afisa mesaj de
+eroare daca este cazul. Va converti string-urile in int-uri prin atoi si va
+compara ordinea parametrilor x1, x2 si y1, y2.
+
+-CROP = comanda va reduce dimensiunile imaginii la selectia curenta. Va retine
+intr-o alta matrice, b, continutul selectiei, va modifica dimensiunea matricii in
+cea corespunzatoare selectiei si va insera matricea b la loc in cea principala.
+
+-ROTATE = comanda va roti intreaga imagine, metoda de inlocuire fiind
+asemanatoare cu cea de la CROP, in plus fiind updatate dimensiunea si selectia,
+sau doar continutul selectiei, daca aceasta este un patrat. Pentru fiecare
+rotatie in parte, se foloseste un anumit algoritm care sa modifice matricea
+in functie de gradul dorit. Gradele de (90, -270), (-90, 270), (180, -180) sunt
+echivalente si va aplica acelasi algoritm.
+
+-GRAYSCALE/SEPIA = comanda va modifica pixelii unei imagini color dupa o
+anumita formula pentru a se obtine efectul dorit. Valoarea pixelilor de
+la efectul de SEPIA va fi aproximata cu ajutorul functiei round.
+
+EXIT = pentru aceasta comanda se verifica, in functia exit_free, cele 2 matrici
+pentru a se elibera memoria ramasa alocata in program.
+
+-orice alta comanda va returna "Invalid command" 
+
+
+

@@ -1,0 +1,48 @@
+Loaded input/xp.ppm
+Selected [100, 860, 100, 500]
+Grayscale filter applied
+Saved output/1.ppm
+Selected [1060, 1820, 700, 1100]
+Grayscale filter applied
+Saved output/2.ppm
+Selected [100, 860, 700, 1100]
+Sepia filter applied
+Selected [1060, 1820, 100, 500]
+Sepia filter applied
+Saved output/3.ppm
+Selected [760, 1160, 400, 800]
+Image rotated.
+Saved output/4.ppm
+Selected ALL
+Image rotated.
+Saved output/5.ppm
+Selected [90, 1830, 90, 1110]
+Image cropped
+Saved output/6.ppm
+Selected [10, 1730, 10, 1010]
+Image cropped
+Saved output/7.ppm
+Selected [635, 1085, 275, 725]
+Image cropped
+WARNING: ASCII not supported by Python implementation
+Saved output/8.ppm
+Loaded input/xp.ppm
+Grayscale filter applied
+Saved output/gray.ppm
+Loaded input/xp.pgm
+Selected [760, 1160, 400, 800]
+Image rotated.
+Saved output/4.pgm
+Selected ALL
+Image rotated.
+Saved output/5.pgm
+Selected [90, 1830, 90, 1110]
+Image cropped
+Saved output/6.pgm
+Selected [10, 1730, 10, 1010]
+Image cropped
+Saved output/7.pgm
+Selected [635, 1085, 275, 725]
+Image cropped
+WARNING: ASCII not supported by Python implementation
+Saved output/8.pgm
